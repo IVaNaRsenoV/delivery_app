@@ -1,0 +1,36 @@
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.shoppingCart__container {
+    display: flex;
+    justify-content: space-between;
+
+    .form {
+        width: 45%;
+        height: 60vh;
+        border: 1px solid black;
+        padding-top: 40px;
+
+        .shoppingCart__form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            padding-left: 60px;
+            label {
+                margin: 10px;
+            }
+            input {
+                width: 50%;
+            }
+        }
+    }
+
+    .basket__container {
+        overflow: auto;
+        width: 45%;
+        height: 60vh;
+        border: 1px solid black;
+    }
+}

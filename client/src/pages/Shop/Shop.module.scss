@@ -1,0 +1,28 @@
+.container__shop {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .shop__menu {
+        width: 25%;
+        height: 80vh;
+        border: 1px solid black;
+        ul li {
+            cursor: pointer;
+        }
+    }
+
+    .shop__catalog {
+        border: 1px solid black;
+        width: 70%;
+        height: 80vh;
+        text-align: center;
+        overflow: auto;
+        .card {
+            display: inline-block;
+            border: 1px solid black;
+            margin: 20px;
+        }
+    }
+}
