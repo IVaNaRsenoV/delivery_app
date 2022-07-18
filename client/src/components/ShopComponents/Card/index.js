@@ -21,14 +21,24 @@ export const Card = ({ img, title, id, toggle }) => {
       <img src={img} alt="card" />
       <h3>{title}</h3>
       {toggle === "basket" ? (
-        <button
-          onClick={() => {
-            dispatch(dec());
-            dispatch(deleteItem(id));
-          }}
-        >
-          delete item
-        </button>
+        <>
+          <button
+            onClick={() => {
+              dispatch(inc());
+              dispatch(postData(dispatch, title, img));
+            }}
+          >
+            add item
+          </button>
+          <button
+            onClick={() => {
+              dispatch(dec());
+              dispatch(deleteItem(id));
+            }}
+          >
+            delete item
+          </button>
+        </>
       ) : (
         <button
           onClick={() => {
