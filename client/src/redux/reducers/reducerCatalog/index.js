@@ -4,7 +4,7 @@ const initialState = {
   value: "adapter",
 };
 
-const reducerBasket = createSlice({
+const reducerCatalog = createSlice({
   name: "basket",
   initialState,
   reducers: {
@@ -15,5 +15,5 @@ const reducerBasket = createSlice({
   extraReducers: {},
 });
 
-export default reducerBasket.reducer;
-export const { getValue } = reducerBasket.actions;
+export default reducerCatalog.reducer;
+export const { getValue } = reducerCatalog.actions;
