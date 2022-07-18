@@ -11,7 +11,6 @@ export const ShoppingCart = ({ data }) => {
       </div>
       <div>
         <h1>total cost</h1>
-        <button>Send</button>
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
 import React from "react";
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getBasket } from "./redux/hooks/getBasket";
 import { Shop, ShoppingCart } from "./pages";
+import { Header } from "./components";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,6 @@ const App = () => {
   const data = [];
   selector.filter((item) => {
     let i = data.findIndex((el) => el.type === item.type);
-    // debugger;
     if (i <= -1) {
       data.push(item);
     }
@@ -25,10 +25,7 @@ const App = () => {
 
   return (
     <div>
-      <ul>
-        <Link to="/shop">Shop</Link>
-        <Link to="/shopping_cart">Shopping cart</Link>
-      </ul>
+      <Header />
       <Routes>
         <Route path="/" element={<h1>application</h1>} />
         <Route path="/shop" element={<Shop />} />

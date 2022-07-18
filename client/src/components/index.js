@@ -6,3 +6,5 @@ export { List } from "./ShopComponents/List";
 export { Form } from "./ShoppingCartComponents/Form";
 export { ListForm } from "./ShoppingCartComponents/ListForm";
 export { BasketContainer } from "./ShoppingCartComponents/BasketContainer";
+
+export { Header } from "./Header";
