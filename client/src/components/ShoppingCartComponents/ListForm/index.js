@@ -1,10 +1,15 @@
 import React from "react";
 import { Form } from "../Form";
+import { useDispatch, useSelector } from "react-redux";
+import { postOffer } from "../../../redux/hooks/postOffer";
 import styles from "./ListForm.module.scss";
 
 import { useForm } from "react-hook-form";
 
 export const ListForm = () => {
+  const dispatch = useDispatch();
+  const basket = useSelector((state) => state.getBasket.data);
+
   const {
     register,
     formState: { errors },
@@ -14,6 +19,15 @@ export const ListForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    console.log(`${JSON.stringify(basket)}`);
+    const arr = `${JSON.stringify(basket)}`;
+    // basket.forEach((el) => arr.push(el));
+    if (basket.length > 0) {
+      dispatch(postOffer(data, basket));
+      alert("Заказ оформлен!");
+    } else {
+      alert("Пожалуйста добавте продукты в корзину!");
+    }
     reset();
   };
 
