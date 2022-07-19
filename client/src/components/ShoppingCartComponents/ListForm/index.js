@@ -76,9 +76,16 @@ export const ListForm = () => {
         <Form register={register} errors={errors} name={"address"} />
         <button
           style={{
+            border: "none",
+            fontSize: "35px",
+            backgroundColor: "black",
+            borderRadius: "20px",
+            color: "white",
+            padding: "10px 20px",
             position: "absolute",
             right: "0px",
-            bottom: "-30px",
+            bottom: "-70px",
+            cursor: "pointer",
           }}
         >
           Send

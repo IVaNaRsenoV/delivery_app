@@ -26,7 +26,7 @@ export const BasketContainer = ({ selector }) => {
             />
             {data.title === "menu" && <Quantity data={menu} />}
             {data.title === "chisburger" && <Quantity data={chisburger} />}
-            {data.title === "double burger" && <Quantity data={chisburger} />}
+            {data.title === "double burger" && <Quantity data={doubleBurger} />}
             {data.title === "kfc kids" && <Quantity data={kfcKids} />}
             {data.title === "menu KFC" && <Quantity data={menuKFC} />}
             {data.title === "potato" && <Quantity data={potato} />}
