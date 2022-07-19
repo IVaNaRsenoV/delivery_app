@@ -8,3 +8,16 @@
     justify-content: space-between;
     position: relative;
 }
+
+.totalCost {
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .shoppingCart__container {
+        flex-direction: column-reverse;
+    }
+    .totalCost {
+        padding-left: 60px;
+    }
+}

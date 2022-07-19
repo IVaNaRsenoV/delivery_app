@@ -1,6 +1,6 @@
 .form {
     width: 30%;
-    height: 60vh;
+    height: 80vh;
     border: 1px solid black;
     padding-top: 40px;
     label {
@@ -32,4 +32,16 @@
     right: 0px;
     bottom: -70px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .form {
+        margin-top: 30px;
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+    }
+    .button__form {
+        right: 60px;
+    }
 }

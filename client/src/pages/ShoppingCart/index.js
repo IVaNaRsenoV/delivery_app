@@ -19,7 +19,7 @@ export const ShoppingCart = ({ data }) => {
         <ListForm />
         <BasketContainer selector={data} />
       </div>
-      <div style={{ paddingTop: "20px" }}>
+      <div className={styles.totalCost}>
         <h1>total cost: {totalCount} UAH</h1>
       </div>
     </div>

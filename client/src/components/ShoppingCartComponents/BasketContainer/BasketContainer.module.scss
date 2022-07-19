@@ -1,7 +1,7 @@
 .basket__container {
     overflow: auto;
     width: 65%;
-    height: 60vh;
+    height: 80vh;
     border: 1px solid black;
     text-align: center;
 }
@@ -26,5 +26,12 @@
         border-radius: 15px;
         letter-spacing: 2px;
         padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .basket__container {
+        width: 90%;
+        margin: 0 auto;
     }
 }
