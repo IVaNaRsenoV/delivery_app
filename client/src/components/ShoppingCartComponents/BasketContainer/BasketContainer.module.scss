@@ -1,6 +1,30 @@
 .basket__container {
     overflow: auto;
-    width: 45%;
+    width: 65%;
     height: 60vh;
     border: 1px solid black;
+    text-align: center;
+}
+
+.quantity__container {
+    display: border 1px solid black;
+}
+
+.card__basket {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    
+    .quantity {
+        position: absolute;
+        top: 30px;
+        z-index: 2;
+        left: 40px;
+        font-size: 20px;
+        color: white;
+        background-color: black;
+        border-radius: 15px;
+        letter-spacing: 2px;
+        padding: 10px;
+    }
 }

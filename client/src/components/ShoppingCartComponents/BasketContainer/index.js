@@ -15,25 +15,32 @@ export const BasketContainer = ({ selector }) => {
     <div className={styles.basket__container}>
       {selector.map(({ data, id }, index) => {
         return (
-          <>
+          <div className={styles.card__basket}>
             <Card
               img={data.img}
               title={data.title}
+              cost={data.cost}
               key={index}
               toggle={"basket"}
               id={id}
             />
-            {data.title === "menu" && <span>{menu.length}</span>}
-            {data.title === "chisburger" && <span>{chisburger.length}</span>}
-            {data.title === "double burger" && (
-              <span>{doubleBurger.length}</span>
-            )}
-            {data.title === "kfc kids" && <span>{kfcKids.length}</span>}
-            {data.title === "menu KFC" && <span>{menuKFC.length}</span>}
-            {data.title === "potato" && <span>{potato.length}</span>}
-          </>
+            {data.title === "menu" && <Quantity data={menu} />}
+            {data.title === "chisburger" && <Quantity data={chisburger} />}
+            {data.title === "double burger" && <Quantity data={chisburger} />}
+            {data.title === "kfc kids" && <Quantity data={kfcKids} />}
+            {data.title === "menu KFC" && <Quantity data={menuKFC} />}
+            {data.title === "potato" && <Quantity data={potato} />}
+          </div>
         );
       })}
+    </div>
+  );
+};
+
+const Quantity = ({ data }) => {
+  return (
+    <div className={styles.quantity}>
+      <span>Quantity: {data.length}</span>
     </div>
   );
 };

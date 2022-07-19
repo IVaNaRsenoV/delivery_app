@@ -5,11 +5,11 @@ import { deleteItem } from "../../..//redux/hooks/deleteItem";
 import { inc, dec } from "../../../redux/reducers/reducerGetBasket";
 import styles from "./Card.module.scss";
 
-const postData = (dispatch, title, img) => {
-  dispatch(basketPost({ title, img }));
+const postData = (dispatch, title, img, cost) => {
+  dispatch(basketPost({ title, img, cost }));
 };
 
-export const Card = ({ img, title, id, toggle }) => {
+export const Card = ({ img, title, cost, id, toggle }) => {
   const dispatch = useDispatch();
   const count = useSelector((state) => state.getBasket.count);
   React.useEffect(() => {
@@ -19,36 +19,42 @@ export const Card = ({ img, title, id, toggle }) => {
   return (
     <div className={styles.card}>
       <img src={img} alt="card" />
-      <h3>{title}</h3>
-      {toggle === "basket" ? (
-        <>
+      <div className={styles.card__footer}>
+        <h3>{title}</h3>
+        <h3>cost: {cost}</h3>
+        {toggle === "basket" ? (
+          <div className={styles.card__buttonBasket}>
+            <button
+              className={styles.button__basket}
+              onClick={() => {
+                dispatch(inc());
+                dispatch(postData(dispatch, title, img, cost));
+              }}
+            >
+              add item
+            </button>
+            <button
+              className={styles.button__basket}
+              onClick={() => {
+                dispatch(dec());
+                dispatch(deleteItem(id));
+              }}
+            >
+              delete item
+            </button>
+          </div>
+        ) : (
           <button
+            className={styles.button__shop}
             onClick={() => {
               dispatch(inc());
-              dispatch(postData(dispatch, title, img));
+              postData(dispatch, title, img, cost);
             }}
           >
-            add item
+            add to cart
           </button>
-          <button
-            onClick={() => {
-              dispatch(dec());
-              dispatch(deleteItem(id));
-            }}
-          >
-            delete item
-          </button>
-        </>
-      ) : (
-        <button
-          onClick={() => {
-            dispatch(inc());
-            postData(dispatch, title, img);
-          }}
-        >
-          add to cart
-        </button>
-      )}
+        )}
+      </div>
     </div>
   );
 };

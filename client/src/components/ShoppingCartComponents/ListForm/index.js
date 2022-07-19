@@ -49,10 +49,10 @@ export const ListForm = () => {
             <input
               style={{
                 marginLeft: "10px",
-                width: "400.5px",
+                width: "80%",
                 height: "40px",
                 fontSize: "25px",
-                padding: "10px",
+                padding: "4x",
                 outline: "0",
                 marginTop: "10px",
               }}
