@@ -1,4 +1,4 @@
-export { Card } from "./ShopComponents/Card";
+export { Card } from "./Card";
 export { ToggleCatalog } from "./ShopComponents/ToggleCatalog";
 export { Catalog } from "./ShopComponents/Catalog";
 export { List } from "./ShopComponents/List";
@@ -8,3 +8,7 @@ export { ListForm } from "./ShoppingCartComponents/ListForm";
 export { BasketContainer } from "./ShoppingCartComponents/BasketContainer";
 
 export { Header } from "./Header";
+export { ButtonBasket, Button } from "./ShoppingCartComponents/ButtonBasket";
+
+export { TogglePage } from "./TogglePage";
+export { CardFooter } from "./CardFooter";

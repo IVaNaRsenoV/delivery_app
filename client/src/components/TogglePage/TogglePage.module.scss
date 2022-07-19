@@ -1,0 +1,14 @@
+.button__shop {
+    font-size: 25px;
+    border: none;
+    background-color: rgb(43, 38, 38);
+    color: white;
+    padding: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+}
+.button__shop:hover {
+    background-color: black;
+}

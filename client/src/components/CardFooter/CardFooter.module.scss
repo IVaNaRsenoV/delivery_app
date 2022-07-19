@@ -1,0 +1,10 @@
+.card__footer {
+    display: flex;
+    flex-direction: column;
+    h3 {
+        font-size: 30px;
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+}

@@ -37,15 +37,9 @@ export const ListForm = () => {
         <Form register={register} errors={errors} name={"name"} />
         <Form register={register} errors={errors} name={"surname"} />
 
-        <div
-          style={{
-            marginBottom: "20px",
-            paddingLeft: "60px",
-            position: "relative",
-          }}
-        >
+        <div className={styles.form__container}>
           <label>
-            <span style={{ fontSize: "25px" }}>Email</span>
+            <span>Email</span>
             <input
               style={{
                 marginLeft: "10px",
@@ -74,22 +68,7 @@ export const ListForm = () => {
         </div>
 
         <Form register={register} errors={errors} name={"address"} />
-        <button
-          style={{
-            border: "none",
-            fontSize: "35px",
-            backgroundColor: "black",
-            borderRadius: "20px",
-            color: "white",
-            padding: "10px 20px",
-            position: "absolute",
-            right: "0px",
-            bottom: "-70px",
-            cursor: "pointer",
-          }}
-        >
-          Send
-        </button>
+        <button className={styles.button__form}>Send</button>
       </form>
     </div>
   );

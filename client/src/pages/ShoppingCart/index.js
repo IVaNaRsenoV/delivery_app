@@ -20,7 +20,7 @@ export const ShoppingCart = ({ data }) => {
         <BasketContainer selector={data} />
       </div>
       <div style={{ paddingTop: "20px" }}>
-        <h1>total cost: {totalCount}</h1>
+        <h1>total cost: {totalCount} UAH</h1>
       </div>
     </div>
   );

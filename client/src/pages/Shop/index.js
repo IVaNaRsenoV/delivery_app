@@ -5,7 +5,7 @@ import styles from "./Shop.module.scss";
 
 export const Shop = () => {
   const dispatch = useDispatch();
-  const selector = useSelector((state) => state.catalog.value);
+  const selector = useSelector((state) => state.catalog.value); // directory array
 
   return (
     <div className={styles.container__shop}>

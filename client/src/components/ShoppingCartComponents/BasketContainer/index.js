@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Card } from "../../ShopComponents/Card";
+import { Card } from "../../Card";
 import styles from "./BasketContainer.module.scss";
 
 export const BasketContainer = ({ selector }) => {

@@ -8,8 +8,9 @@ import { Header } from "./components";
 const App = () => {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state.getBasket.data);
-  const count = useSelector((state) => state.getBasket.count);
+  const count = useSelector((state) => state.getBasket.count); // count is needed in order to force the page to be rendered and load the data when it changes
 
+  // Algorithm for sorting unique objects in an array by type
   const data = [];
   selector.filter((item) => {
     let i = data.findIndex((el) => el.type === item.type);
@@ -20,7 +21,7 @@ const App = () => {
   });
 
   React.useEffect(() => {
-    dispatch(getBasket());
+    dispatch(getBasket()); // Loading products for the shopping cart page from the database
   }, [dispatch, count]);
 
   return (
