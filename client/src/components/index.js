@@ -12,3 +12,4 @@ export { ButtonBasket, Button } from "./ShoppingCartComponents/ButtonBasket";
 
 export { TogglePage } from "./TogglePage";
 export { CardFooter } from "./CardFooter";
+export { Popup } from "./Popup";
