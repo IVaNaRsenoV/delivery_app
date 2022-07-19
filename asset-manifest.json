@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/delivery_app/static/css/main.04c117b4.css",
+    "main.js": "/delivery_app/static/js/main.b4347129.js",
+    "static/media/potato.png": "/delivery_app/static/media/potato.b547f15e99913ecb1085.png",
+    "static/media/menuKFC.png": "/delivery_app/static/media/menuKFC.9bfb31ec61b1900cd9b8.png",
+    "static/media/chisburger.png": "/delivery_app/static/media/chisburger.628a81b43dad4758e090.png",
+    "static/media/double_burger.png": "/delivery_app/static/media/double_burger.1636be35b4ad2bf182c4.png",
+    "static/media/kfc_kids.png": "/delivery_app/static/media/kfc_kids.861f87cc85d1421537ef.png",
+    "static/media/menu.png": "/delivery_app/static/media/menu.5e99e8bd191bf2811ebf.png",
+    "index.html": "/delivery_app/index.html",
+    "main.04c117b4.css.map": "/delivery_app/static/css/main.04c117b4.css.map",
+    "main.b4347129.js.map": "/delivery_app/static/js/main.b4347129.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04c117b4.css",
+    "static/js/main.b4347129.js"
+  ]
+}
