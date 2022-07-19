@@ -9,7 +9,6 @@ export const ShoppingCart = ({ data }) => {
   let totalCount = 0;
 
   totalCost.forEach((el) => {
-    console.log(el.data.cost, " xxxx");
     totalCount = totalCount + el.data.cost;
   });
 
