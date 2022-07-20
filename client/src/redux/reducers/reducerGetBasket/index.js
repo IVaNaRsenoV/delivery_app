@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getBasket } from "../../hooks/getBasket";
 
-const initialState = {
+export const initialState = {
   data: [],
   count: 0,
 };

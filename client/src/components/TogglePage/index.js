@@ -1,7 +1,10 @@
+import { useDispatch } from "react-redux";
 import { ButtonBasket, Button } from "../ShoppingCartComponents/ButtonBasket";
 import styles from "./TogglePage.module.scss";
 
-export const TogglePage = ({ toggle, title, cost, img, id, dispatch }) => {
+export const TogglePage = ({ toggle, title, cost, img, id }) => {
+  const dispatch = useDispatch();
+
   return (
     <>
       {toggle === "basket" ? (
